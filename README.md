@@ -21,6 +21,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require 'music/text/normalization'
+
 include Music::Text::Normalization
 
 normalize_artist_name('Run-D.M.C.') # => 'run_dmc'
