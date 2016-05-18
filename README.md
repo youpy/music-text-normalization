@@ -23,7 +23,7 @@ Or install it yourself as:
 ```ruby
 include Music::Text::Normalization
 
-normalize_artist_name('Run-D.M.C.') // => 'run_dmc'
+normalize_artist_name('Run-D.M.C.') # => 'run_dmc'
 ```
 
 ## See Also
