@@ -1,4 +1,4 @@
-# music-text-normalization
+# music-text-normalization [![Build Status](https://secure.travis-ci.org/youpy/music-text-normalization.png)](http://secure.travis-ci.org/youpy/music-text-normalization)
 
 A library for normalizing music related texts
 
