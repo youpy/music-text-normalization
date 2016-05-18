@@ -7,6 +7,8 @@ module Music
       def normalize_artist_name(text)
         lowercase_name = text.
                          tr("０-９Ａ-Ｚａ-ｚ", "0-9A-Za-z").
+                         gsub(/　/, ' ').
+                         gsub(/ +/, ' ').
                          downcase
 
         case lowercase_name

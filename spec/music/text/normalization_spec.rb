@@ -21,6 +21,7 @@ describe Normalization do
       expect(Normalization.normalize_artist_name("ヒカシュー")).to eql('ヒカシュー')
       expect(Normalization.normalize_artist_name("水曜日のカンパネラ")).to eql('水曜日のカンパネラ')
       expect(Normalization.normalize_artist_name("ｔｈｅ　Ｂｅａｔｌｅｓ")).to eql('the_beatles')
+      expect(Normalization.normalize_artist_name("ｔｈｅ　Foo")).to eql('foo')
     end
   end
 end
