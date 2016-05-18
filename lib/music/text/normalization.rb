@@ -1,10 +1,13 @@
+# coding: utf-8
 require "music/text/normalization/version"
 
 module Music
   module Text
     module Normalization
       def normalize_artist_name(text)
-        lowercase_name = text.downcase
+        lowercase_name = text.
+                         tr("０-９Ａ-Ｚａ-ｚ", "0-9A-Za-z").
+                         downcase
 
         case lowercase_name
         when 'bruce springsteen and the e street band'
@@ -21,7 +24,7 @@ module Music
           lowercase_name.
             gsub(/['\.]/, '').
             sub(/^(a|an|the)\ +/, '').
-            gsub(/[^a-z0-9]+/, '_').
+            gsub(/[^a-z0-9\p{Hiragana}\p{Katakana}ー－一-龠々]+/, '_').
             sub(/^_/, '').sub(/_$/, '')
         end
       end

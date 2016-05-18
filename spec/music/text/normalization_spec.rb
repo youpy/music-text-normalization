@@ -1,3 +1,4 @@
+# coding: utf-8
 require File.dirname(__FILE__) + '/../../spec_helper'
 
 include Music::Text
@@ -17,6 +18,9 @@ describe Normalization do
       expect(Normalization.normalize_artist_name("A New Found Glory")).to eql('new_found_glory')
       expect(Normalization.normalize_artist_name("The Beatles")).to eql('the_beatles')
       expect(Normalization.normalize_artist_name("The Verve")).to eql('the_verve')
+      expect(Normalization.normalize_artist_name("ヒカシュー")).to eql('ヒカシュー')
+      expect(Normalization.normalize_artist_name("水曜日のカンパネラ")).to eql('水曜日のカンパネラ')
+      expect(Normalization.normalize_artist_name("ｔｈｅ　Ｂｅａｔｌｅｓ")).to eql('the_beatles')
     end
   end
 end
