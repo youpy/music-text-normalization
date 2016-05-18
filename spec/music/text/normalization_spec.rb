@@ -15,6 +15,8 @@ describe Normalization do
       expect(Normalization.normalize_artist_name("Tom Petty and the Hearbreakers")).to eql('tom_petty')
       expect(Normalization.normalize_artist_name("Bob Marley and the Wailers")).to eql('bob_marley')
       expect(Normalization.normalize_artist_name("A New Found Glory")).to eql('new_found_glory')
+      expect(Normalization.normalize_artist_name("The Beatles")).to eql('the_beatles')
+      expect(Normalization.normalize_artist_name("The Verve")).to eql('the_verve')
     end
   end
 end
