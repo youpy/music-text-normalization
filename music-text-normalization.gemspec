@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["youpy@buycheapviagraonlinenow.com"]
   spec.summary       = %q{A library for normalizing music related texts}
   spec.description   = %q{A library for normalizing music related texts}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/youpy/music-text-normalization"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
